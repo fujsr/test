@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fujairah Showroom Tracker</title>
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <meta name="theme-color" content="#006666">
     <link rel="apple-touch-icon" href="RAKWAKLIN.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -2448,12 +2448,13 @@ window.renderChart = renderChart;
 window.exportData = exportData;
 window.setActivityFilter = setActivityFilter;
 if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('./sw.js')
-                .then(reg => console.log('Service Worker registered'))
-                .catch(err => console.log('Service Worker failed', err));
-        });
-    }
+    window.addEventListener('load', () => {
+        // Added the dot here: ./sw.js
+        navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('Service Worker registered'))
+            .catch(err => console.log('Service Worker failed', err));
+    });
+}
 </script>
 
 <footer style="text-align:center; padding:20px; color:#888; font-size:13px; background: var(--card-bg); border-radius: 0 0 35px 35px;"> 
