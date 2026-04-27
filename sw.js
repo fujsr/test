@@ -2,7 +2,7 @@ const CACHE_NAME = 'fuj-tracker-v1';
 const ASSETS = [
   './',
   './index.html',
-  './RAKWAKLIN.png',
+  './rakwalkin.png',
   './manifest.json'
 ];
 
